@@ -1,0 +1,2 @@
+headers.mingw = wtypesbase.h winhttp.h
+linkerOpts.mingw = -lwinhttp

@@ -12,6 +12,15 @@ repositories {
 kotlin {
     jvm()
     mingwX64() {
+        compilations {
+            getByName("main") {
+                cinterops {
+                    val winhttp by creating {
+                        packageName = "cinterop.winhttp"
+                    }
+                }
+            }
+        }
         binaries {
             executable {
                 entryPoint = "com.geno1024.yapt.main"
